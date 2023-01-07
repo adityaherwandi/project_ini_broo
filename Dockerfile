@@ -1,9 +1,3 @@
-FROM alpine
+FROM nginx:stable-alpine
 
-LABEL   Maintainer="Aditya Herwandi" \
-        Kelas="Pengantar Cloud Computing"
-
-WORKDIR /fileku
-
-RUN touch mylife.txt && \
-  echo "Dibuat oleh Aditya" > /fileku/mylife.txt
+COPY ./src/* /usr/share/nginx/html
