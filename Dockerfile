@@ -2,4 +2,4 @@ FROM nginx
 
 COPY ./src/. /usr/share/nginx/html/
 
-EXPOSE 80/tcp
+EXPOSE 8080:80
